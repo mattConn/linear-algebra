@@ -16,12 +16,13 @@ double magV(const vec &v)
 	return sqrt(sum);
 }
 
-vec addV(const vec &a, const vec &b)
+vec sumV(vector<vec> L)
 {
-	vec sum;
+	vec sum(L[0].size(), 0);
 
-	for(int i=0; i < a.size(); i++)
-		sum.push_back(a[i] + b[i]);
+	for(int i=0; i < L.size(); i++) // rows 
+		for(int j=0; j < sum.size(); j++) // cols 
+			sum[j] += L[i][j];
 
 	return sum;
 }

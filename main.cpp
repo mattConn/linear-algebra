@@ -8,12 +8,13 @@ void printV(const vec &v);
 
 int main()
 {
-	vec v1 = {3,4};
-	vec v2 = {5,6};
+	vec v1 = {3,4,5};
+	vec v2 = {6,7,8};
 
-	vec v3 = addV(v1, v2);
+	vec v3 = sumV({v1, v2});
 
 	printV(v3);
+
 
 	return 0;
 }
